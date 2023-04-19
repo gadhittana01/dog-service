@@ -1,0 +1,23 @@
+-- Get All Dog --
+curl --location --request GET 'http://localhost:8080/api/v1/dog'
+
+-- Get All Buy Dog --
+curl --location --request GET 'http://localhost:8080/api/v1/dog/buy'
+
+-- Buy/Create Dog -- 
+curl --location --request POST 'http://localhost:8080/api/v1/dog/buy' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name" : "mochi",
+    "breed" : "shiba"
+}'
+
+-- Update Dog --
+curl --location --request PUT 'http://localhost:8080/api/v1/dog/buy/1' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name" : "boba"
+}'
+
+-- Delete Dog --
+curl --location --request DELETE 'http://localhost:8080/api/v1/dog/buy/1'
